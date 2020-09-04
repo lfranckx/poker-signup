@@ -5,7 +5,7 @@ function dynInput(cbox) {
         }
         const input = document.createElement("input");
         input.type = "text";
-        input.name = `${cbox.name} ` + "username";
+        input.name = `${cbox.name} ` + "handle";
         input.placeholder = "Username";
         input.required = true;
         const div = document.createElement("div");

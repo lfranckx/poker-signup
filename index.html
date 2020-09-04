@@ -8,67 +8,75 @@
 </head>
 <body>
     <main>
-        <form class="gform" method="POST" data-email="lfranckx@gmail.com"
-            action="https://script.google.com/macros/s/AKfycbwiFaPJ5z8ajqKmt9yWxn2jyTnCnpFAOVFPrVjK3cTzp3yRhtWH/exec"
-        >
-            <div>
-                <label for="first">First Name</label>
-            </div>
-            <div>
-                <input type="text" name="first" required />
-            </div>
-            <div>
-                <label for="last">Last Name</label>
-            </div>
-            <div>
-                <input type="text" name="last" required />
-            </div>
-            <div>
-                <label for="phone">Phone Number</label>
-            </div>
-            <div>
-                <input type="text" name="phone" required />
-            </div>
-            <div>
-                <label for="email">Email</label>
-            </div>
-            <div>
-                <input type="text" name="email" required />
-            </div>
-            <div>
-                <label for="referral">Referred By</label>
-            </div>
-            <div>
-                <input type="text" name="referral" required />
-            </div>
-            <div>
-                <label for="payment">Payment Method:</label>
-            </div>
-            <div class="apple-pay">
-                <input type="checkbox" name="apple-pay" onclick="dynInput(this);">
-                <label for="apple-pay">Apple Pay</label>
-            </div>
-            <div class="paypal">
-                <input type="checkbox" name="paypal" onclick="dynInput(this);">
-                <label for="paypal">Paypal</label>
-            </div>
-            <div class="venmo">
-                <input type="checkbox" name="venmo" required onclick="dynInput(this);">
-                <label for="venmo">Venmo</label>
-            </div>
-            <div class="zelle">
-                <input type="checkbox" name="zelle" onclick="dynInput(this);">
-                <label for="zelle">Zelle</label>
-            </div>
-            <div class="cashapp">
-                <input type="checkbox" name="cashapp" onclick="dynInput(this);">
-                <label for="cashapp">CashApp</label>
-            </div>
-            <div>
-                <input type="submit" name="submit" id="submit" value="Send">
-            </div>
-        </form>
+        <header role="banner"><h1>CGK Sign Up</h1></header>
+        <section>
+            <form class="gform" method="POST" data-email="lfranckx@gmail.com"
+                action="https://script.google.com/macros/s/AKfycbwiFaPJ5z8ajqKmt9yWxn2jyTnCnpFAOVFPrVjK3cTzp3yRhtWH/exec"
+            >
+                <div>
+                    <label for="first">First Name</label>
+                </div>
+                <div>
+                    <input type="text" name="first" required />
+                </div>
+                <div>
+                    <label for="last">Last Name</label>
+                </div>
+                <div>
+                    <input type="text" name="last" required />
+                </div>
+                <div>
+                    <label for="phone">Phone Number</label>
+                </div>
+                <div>
+                    <input type="text" name="phone" required />
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                </div>
+                <div>
+                    <input type="text" name="email" required />
+                </div>
+                <div>
+                    <label for="referral">Referred By</label>
+                </div>
+                <div>
+                    <input type="text" name="referral" required />
+                </div>
+                <div>
+                    <label for="payment">Payment Method:</label>
+                </div>
+                <div class="apple-pay">
+                    <input type="checkbox" name="apple-pay" onclick="dynInput(this);">
+                    <label for="apple-pay">Apple Pay</label>
+                </div>
+                <div class="paypal">
+                    <input type="checkbox" name="paypal" onclick="dynInput(this);">
+                    <label for="paypal">Paypal</label>
+                </div>
+                <div class="venmo">
+                    <input type="checkbox" name="venmo" required onclick="dynInput(this);">
+                    <label for="venmo">Venmo</label>
+                </div>
+                <div class="zelle">
+                    <input type="checkbox" name="zelle" onclick="dynInput(this);">
+                    <label for="zelle">Zelle</label>
+                </div>
+                <div class="cashapp">
+                    <input type="checkbox" name="cashapp" onclick="dynInput(this);">
+                    <label for="cashapp">CashApp</label>
+                </div>
+                <button name="submit" id="submit">Send</button>
+            </form>
+        </section>
+
+        <div class="thankyou_message" style="display:none;">
+            <h2><em>Thanks</em>for joining.
+                Have fun and good luck!
+            </h2>
+        </div>
     </main>
+
     <script src="index.js"></script>
     <!--    Prevent the form from changing to the JSON response/result
             Submit the form using AJAX -->
