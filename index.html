@@ -8,13 +8,21 @@
 </head>
 <body>
     <main>
-        <header role="banner"><h1>CGK Sign Up</h1></header>
+        <header role="banner" class="content-head is-center">
+            <h1>Club Sign Up</h1>
+            <aside>
+              Please provide us with your full name, email, phone number, and your method of payment.
+              All information will be kept privately and securely. Apple Pay or Paypal is the 
+              preferred method of payment due to payout restrictions from Venmo and Zelle. You may provide
+              more than one method of payment.
+            </aside>
+        </header>
         <section>
             <form class="gform" method="POST" data-email="lfranckx@gmail.com"
                 action="https://script.google.com/macros/s/AKfycbwiFaPJ5z8ajqKmt9yWxn2jyTnCnpFAOVFPrVjK3cTzp3yRhtWH/exec"
             >
                 <div>
-                    <label for="first">First Name</label>
+                    <label for="first">Full</label>
                 </div>
                 <div>
                     <input type="text" name="first" required />
@@ -66,14 +74,12 @@
                     <input type="checkbox" name="cashapp" onclick="dynInput(this);">
                     <label for="cashapp">CashApp</label>
                 </div>
-                <button name="submit" id="submit">Send</button>
+                <input type="submit" value="Send" name="submit" id="submit">
             </form>
         </section>
 
         <div class="thankyou_message" style="display:none;">
-            <h2><em>Thanks</em>for joining.
-                Have fun and good luck!
-            </h2>
+            <h2><em>Thanks</em>for joining. Good luck!</h2>
         </div>
     </main>
 

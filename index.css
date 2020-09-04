@@ -1,4 +1,8 @@
-main {
+body {
+    margin: 2em;
+}
+
+.is-center {
     text-align: center;
 }
 
