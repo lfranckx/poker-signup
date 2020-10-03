@@ -51,6 +51,7 @@
 
     function handleFormSubmit(event) { // handles form submit without any jQuery
         event.preventDefaut(); // we are submitting via xhr below
+        console.log("handleFormSubmit running");
         const form = event.target;
         const formData = getFormData(form);
         const data = formData.data;
@@ -64,7 +65,7 @@
         const url = form.action;
         const xhr = new XMLHttpRequest();
         xhr.open('POST', url);
-        // xhr.withCredentials = true;
+        xhr.withCredentials = true;
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
