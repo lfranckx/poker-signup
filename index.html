@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CashGameKrew Sign Up</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -12,10 +12,7 @@
     <header role="banner" class="content-head is-center">
       <h1>Club Sign Up</h1>
       <aside>
-        Please provide us with your full name, email, phone number, and your method of payment.
-        All information will be kept privately and securely. Apple Pay or Paypal is the 
-        preferred method of payment due to payout restrictions from Venmo and Zelle. You may provide
-        more than one method of payment.
+        Please provide all of the requested information. Apple Pay or Paypal is the preferred method of payment due to payout restrictions from Venmo and Zelle.
       </aside>
     </header>
 
@@ -26,19 +23,19 @@
         <fieldset class="pure-group">
             <label for="name">Full Name: </label>
             <input id="name" name="name" 
-            required placeholder="What your Mom calls you" />
+            required  />
         </fieldset>
 
         <fieldset class="pure-group">
             <label for="phone">Phone Number: </label>
             <input id="phone" name="phone" 
-            required placeholder="408-981-8450"/>
+            required />
         </fieldset>
 
         <fieldset class="pure-group">
             <label for="email">Email Address:</label>
             <input id="email" name="email" type="email" value=""
-            required placeholder="your.name@email.com"/>
+            required />
         </fieldset>
 
         <fieldset class="pure-group">
@@ -50,32 +47,32 @@
             <label for="payment">Payment Method: </label>
         </fieldset>
 
-        <div class="payments">
+        <div class="payments-box">
             <fieldset class="pure-group payments">
-            <input type="checkbox" name="Apple Pay">
-            <label for="apple-pay">Apple Pay</label>
+                <div><input type="checkbox" name="Apple Pay"></div>
+                <div><label for="apple-pay">Apple Pay</label></div>
+            </fieldset>
+
+            <fieldset class="pure-group payments">
+                <div><input type="checkbox" name="PayPal"></div>
+                <div><label for="paypal">Paypal</label></div>
             </fieldset>
     
             <fieldset class="pure-group payments">
-            <input type="checkbox" name="PayPal">
-            <label for="paypal">Paypal</label>
-            </fieldset>
-    
-            <fieldset class="pure-group payments">
-            <input type="checkbox" name="Zelle">
-            <label for="zelle">Zelle</label>
+                <div><input type="checkbox" name="Zelle"></div>
+                <div><label for="zelle">Zelle</label></div>
             </fieldset>
     
             <fieldset class="pure-group payments Venmo">
-            <input type="checkbox" name="Venmo" required onclick="dynInput(this);">
-            <label for="venmo">Venmo</label>
-            <!-- <input type="text" placeholder="Venmo Handle"> -->
+                <div><input type="checkbox" name="Venmo" onclick="dynInput(this);"></div>
+                <div><label for="venmo">Venmo</label></div>
+                <!-- <input type="text" placeholder="Venmo Handle"> -->
             </fieldset>
     
             <fieldset class="pure-group payments CashApp">
-            <input type="checkbox" name="CashApp" onclick="dynInput(this);">
-            <label for="cashapp">CashApp</label>
-            <!-- <input type="text" placeholder="CashApp Handle"> -->
+                <div><input type="checkbox" name="CashApp" onclick="dynInput(this);"></div>
+                <div><label for="cashapp">CashApp</label></div>
+                <!-- <input type="text" placeholder="CashApp Handle"> -->
             </fieldset>
         </div>
         
@@ -96,11 +93,9 @@
   </main>
   
 
-  <!-- SCRIPTS & LINKS -->
+  <!-- SCRIPTS -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="index.css">
-
 <!-- Dynamic Inputs -->
     <script src="index.js"></script>
 <!-- Submit the Form to Google Using "AJAX" -->

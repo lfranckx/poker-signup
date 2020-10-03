@@ -1,5 +1,10 @@
 body {
   margin: auto;
+  padding-bottom: 2em;
+}
+
+main {
+  margin: auto;
   padding: 2em;
   max-width: 700px;
 }
@@ -11,27 +16,33 @@ aside {
   color: #fff;
   margin-bottom: 2em;
   text-align: left;
+  font-size: 16.5px;
+  font-weight: 400;
 }
 
 header {
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 1px;
   margin: 2em 0 1em;
   text-align: center;
 }
 
-.payments {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.payments-box fieldset {
+  padding: 10px 0;
+}
+
+fieldset div {
+  display: inline-block
 }
 
 .button-success {
   color: white;
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  background: rgb(28, 184, 65); /* this is a green */
+  background: rgb(28, 184, 65);
+  margin-top: 1em;
+  float: right;
 }
 
 .button-xlarge {
