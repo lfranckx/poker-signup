@@ -25,6 +25,7 @@
       fields.forEach(function(name){
         var element = elements[name];
         
+<<<<<<< HEAD
         // singular form elements just have one value
         formData[name] = element.value;
   
@@ -77,6 +78,40 @@
             var thankYouMessage = form.querySelector(".thankyou_message");
             if (thankYouMessage) {
               thankYouMessage.style.display = "block";
+=======
+        return { data: formData, honeypot: honeypot };
+    }
+
+    function handleFormSubmit(event) { // handles form submit without any jQuery
+        event.preventDefaut(); // we are submitting via xhr below
+        console.log("handleFormSubmit running");
+        const form = event.target;
+        const formData = getFormData(form);
+        const data = formData.data;
+
+        // If a honeypot is filled, assume it was done by a spam bot.
+        if (formData.honeypot) {
+            return false;
+        }
+
+        disableAllButtons(form);
+        const url = form.action;
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', url);
+        xhr.withCredentials = true;
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                form.reset();
+                const formElements = form.querySelector(".form-elements");
+                if (formElements) {
+                    formElements.style.display = "none"; // hide form
+                }
+                const thankYouMessage = form.querySelector(".thankyou_message");
+                if (thankYouMessage) {
+                    thankYouMessage.style.display = "block";
+                }
+>>>>>>> v2
             }
           }
       };
