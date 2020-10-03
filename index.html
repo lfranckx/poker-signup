@@ -6,97 +6,99 @@
     <title>CashGameKrew Sign Up</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <main>
-        <header role="banner"><h1>CGK Sign Up</h1></header>
-        <section>
-            <form class="gform" method="POST" data-email="lfranckx@gmail.com"
-                action="https://script.google.com/macros/s/AKfycbwiFaPJ5z8ajqKmt9yWxn2jyTnCnpFAOVFPrVjK3cTzp3yRhtWH/exec"
-            >
-                <div>
-                    <label for="first">First Name</label>
-                </div>
-                <div>
-                    <input type="text" name="first" required />
-                </div>
-                <div>
-                    <label for="last">Last Name</label>
-                </div>
-                <div>
-                    <input type="text" name="last" required />
-                </div>
-                <div>
-                    <label for="phone">Phone Number</label>
-                </div>
-                <div>
-                    <input type="text" name="phone" required />
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                </div>
-                <div>
-                    <input type="text" name="email" required />
-                </div>
-                <div>
-                    <label for="referral">Referred By</label>
-                </div>
-                <div>
-                    <input type="text" name="referral" required />
-                </div>
-                <div>
-                    <label for="payment">Payment Method:</label>
-                </div>
-                <div class="apple-pay">
-                    <input type="checkbox" name="apple-pay" onclick="dynInput(this);">
-                    <label for="apple-pay">Apple Pay</label>
-                </div>
-                <div class="paypal">
-                    <input type="checkbox" name="paypal" onclick="dynInput(this);">
-                    <label for="paypal">Paypal</label>
-                </div>
-                <div class="venmo">
-                    <input type="checkbox" name="venmo" required onclick="dynInput(this);">
-                    <label for="venmo">Venmo</label>
-                </div>
-                <div class="zelle">
-                    <input type="checkbox" name="zelle" onclick="dynInput(this);">
-                    <label for="zelle">Zelle</label>
-                </div>
-                <div class="cashapp">
-                    <input type="checkbox" name="cashapp" onclick="dynInput(this);">
-                    <label for="cashapp">CashApp</label>
-                </div>
-                <button name="submit" id="submit">Send</button>
-            </form>
-        </section>
+  <main>
+    <header role="banner" class="content-head is-center">
+      <h1>Club Sign Up</h1>
+      <aside>
+        Please provide all of the requested information. Apple Pay or Paypal is the preferred method of payment due to payout restrictions from Venmo and Zelle.
+      </aside>
+    </header>
 
-        <div class="thankyou_message" style="display:none;">
-            <h2><em>Thanks</em>for joining.
-                Have fun and good luck!
-            </h2>
+    <form class="gform pure-form pure-form-stacked" method="POST" data-email="lfranckx@gmail.com"
+        action="https://script.google.com/macros/s/AKfycbwiFaPJ5z8ajqKmt9yWxn2jyTnCnpFAOVFPrVjK3cTzp3yRhtWH/exec">
+
+        <div class="form-elements">
+        <fieldset class="pure-group">
+            <label for="name">Full Name: </label>
+            <input id="name" name="name" 
+            required  />
+        </fieldset>
+
+        <fieldset class="pure-group">
+            <label for="phone">Phone Number: </label>
+            <input id="phone" name="phone" 
+            required />
+        </fieldset>
+
+        <fieldset class="pure-group">
+            <label for="email">Email Address:</label>
+            <input id="email" name="email" type="email" value=""
+            required />
+        </fieldset>
+
+        <fieldset class="pure-group">
+            <label for="referral">Referred By: </label>
+            <input id="referral" name="referral" required/>
+        </fieldset>
+
+        <fieldset class="pure-group" id="payment-group">
+            <label for="payment">Payment Method: </label>
+        </fieldset>
+
+        <div class="payments-box">
+            <fieldset class="pure-group payments">
+                <div><input type="checkbox" name="Apple Pay"></div>
+                <div><label for="apple-pay">Apple Pay</label></div>
+            </fieldset>
+
+            <fieldset class="pure-group payments">
+                <div><input type="checkbox" name="PayPal"></div>
+                <div><label for="paypal">Paypal</label></div>
+            </fieldset>
+    
+            <fieldset class="pure-group payments">
+                <div><input type="checkbox" name="Zelle"></div>
+                <div><label for="zelle">Zelle</label></div>
+            </fieldset>
+    
+            <fieldset class="pure-group payments Venmo">
+                <div><input type="checkbox" name="Venmo" onclick="dynInput(this);"></div>
+                <div><label for="venmo">Venmo</label></div>
+                <!-- <input type="text" placeholder="Venmo Handle"> -->
+            </fieldset>
+    
+            <fieldset class="pure-group payments CashApp">
+                <div><input type="checkbox" name="CashApp" onclick="dynInput(this);"></div>
+                <div><label for="cashapp">CashApp</label></div>
+                <!-- <input type="text" placeholder="CashApp Handle"> -->
+            </fieldset>
         </div>
-    </main>
+        
+        <fieldset class="pure-group honeypot-field">
+            <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+            <input id="honeypot" type="text" name="honeypot" value="" />
+        </fieldset>
 
+        <button class="button-success pure-button button-xlarge">
+            <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+        </div>
+
+        <!-- Customise the Thankyou Message People See when they submit the form: -->
+        <div class="thankyou_message" style="display:none;">
+        <h2><em>Thanks</em> for joining and good luck!</h2>
+        </div>
+    </form>
+  </main>
+  
+
+  <!-- SCRIPTS -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- Dynamic Inputs -->
     <script src="index.js"></script>
-    <!--    Prevent the form from changing to the JSON response/result
-            Submit the form using AJAX -->
-    <script data-cfasync="false" type="text/javascript" src="sub-handler.js"></script>
+<!-- Submit the Form to Google Using "AJAX" -->
+    <script data-cfasync="false" src="sub-handler.js"></script>
 </body>
 </html>
-
-<!-- 
-    First Name
-    Last Name
-    Phone Number
-    Email
-    Referred By
-    Payment Options
-        Apple Pay
-        Paypal
-        Venmo
-        Zelle
-        CashApp
-    Handle
-
-    arellano.ryan@gmail.com
- -->
