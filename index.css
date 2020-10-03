@@ -1,20 +1,58 @@
+body {
+  margin: auto;
+  padding-bottom: 2em;
+}
+
 main {
-    text-align: center;
+  margin: auto;
+  padding: 2em;
+  max-width: 700px;
 }
 
-section {
-    display: flex;
-    justify-content: center;
+aside {
+  background: #1f8dd6; /* same color as selected state on site menu */
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  color: #fff;
+  margin-bottom: 2em;
+  text-align: left;
+  font-size: 16.5px;
+  font-weight: 400;
 }
 
-form {
-    text-align: left;
+header {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 2em 0 1em;
+  text-align: center;
 }
 
-div {
-    margin: 2px 0;
+.payments-box fieldset {
+  padding: 10px 0;
 }
 
-input[type=text] {
-    padding: 5px;
+fieldset div {
+  display: inline-block
+}
+
+.button-success {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(28, 184, 65);
+  margin-top: 1em;
+  float: right;
+}
+
+.button-xlarge {
+  font-size: 125%;
+}
+
+#name, #email {
+  width: 50%;
+}
+
+.honeypot-field {
+  display: none;
 }
